@@ -1,0 +1,67 @@
+.main {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  text-align: center;
+}
+
+.main__container {
+  width: 250px;
+  height: 400px;
+  border-radius: 30px;
+  perspective: 500px;
+}
+.main__container__card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 2s ease-in-out;
+  transform-style: preserve-3d;
+}
+.main__container__card__recto, .main__container__card__verso {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid yellow;
+  border-radius: 30px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: 2s ease-in-out;
+  transform-style: preserve-3d;
+}
+.main__container__card__recto__contenu, .main__container__card__verso__contenu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  transform: translateZ(50px);
+}
+.main__container__card__recto__contenu__image, .main__container__card__verso__contenu__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.main__container__card__recto__contenu__article, .main__container__card__verso__contenu__article {
+  color: yellow;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.main__container__card__verso {
+  color: yellow;
+}
+
+.main__container:hover .main__container__card {
+  transform: rotateY(180deg);
+}
+
+.main__container__card__verso {
+  transform: rotateY(180deg);
+}/*# sourceMappingURL=style.css.map */
