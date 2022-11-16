@@ -1,8 +1,14 @@
 @charset "UTF-8";
+body {
+  background-color: black;
+}
+
 .main {
   display: flex;
   margin-top: 50px;
   justify-content: center;
+  -webkit-animation: apparition 4s ease-in-out;
+          animation: apparition 4s ease-in-out;
 }
 
 .main__container {
@@ -40,6 +46,8 @@
   background-size: 300% 300%;
   -webkit-animation: degrad 4s ease infinite;
           animation: degrad 4s ease infinite;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
   overflow: hidden;
   height: 100%;
   width: 100%;
@@ -131,6 +139,22 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+@-webkit-keyframes apparition {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes apparition {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
   }
 }
 h1 {

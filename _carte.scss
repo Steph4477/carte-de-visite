@@ -1,7 +1,11 @@
+body{
+    background-color: black;
+}
 .main {
     display: flex;
     margin-top: 50px;
     justify-content: center;
+    animation: apparition 4s ease-in-out;
 }
 
 .main__container {
@@ -34,6 +38,7 @@
                 background: linear-gradient(60deg, #b339e3, #2c4ac6, #e72a11);
                 background-size: 300% 300%;
                 animation: degrad 4s ease infinite;
+                animation-delay: 3s;
                 overflow: hidden;
                 height: 100%;
                 width: 100%;
