@@ -35,7 +35,7 @@ body{
             transform-style: preserve-3d;
             /* décalage du texte*/
             &__fond {
-                background: linear-gradient(60deg, #b339e3, #2c4ac6, #e72a11);
+                background: linear-gradient(60deg, rgb(243, 110, 111), rgb(240, 161, 157), rgb(226, 223, 218), rgb(144, 189, 248), rgb(92, 158, 234));;
                 background-size: 300% 300%;
                 animation: degrad 4s ease infinite;
                 animation-delay: 3s;
