@@ -1,16 +1,14 @@
-body{
-    background-color: black;
-}
 .main {
     display: flex;
     margin-top: 50px;
     justify-content: center;
-    animation: apparition 4s ease-in-out;
 }
 
 .main__container {
-    width: 250px;
-    height: 450px;
+    max-width: 280px;
+    min-width: 280px;
+    max-height: 450px;
+    min-height: 450px;
     border-radius: 30px;
     perspective: 500px;
     &__carte {
@@ -35,10 +33,9 @@ body{
             transform-style: preserve-3d;
             /* décalage du texte*/
             &__fond {
-                background: linear-gradient(60deg, rgb(243, 110, 111), rgb(240, 161, 157), rgb(226, 223, 218), rgb(144, 189, 248), rgb(92, 158, 234));;
-                background-size: 300% 300%;
+                background: linear-gradient(60deg, rgb(45, 104, 197)0%, rgb(45, 159, 252)28%, rgb(15, 197, 251)34%, rgb(255, 255, 255)50%, rgb(15, 197, 251)60%,  rgb(45, 159, 252)75%, rgb(45, 104, 197)90%);
+                background-size: 300% 200%;
                 animation: degrad 4s ease infinite;
-                animation-delay: 3s;
                 overflow: hidden;
                 height: 100%;
                 width: 100%;
@@ -53,7 +50,7 @@ body{
                 transform: translateZ(50px);
                 /* decalage du texte */
                 &__article {
-                    color: rgb(222, 225, 25);
+                    color: white;
                     font-family: Arial, Helvetica, sans-serif;
                     text-align: center;
                     text-shadow: 2px 2px black;
@@ -100,6 +97,8 @@ body{
                     text-align:center;
                     justify-content: center;
                     align-items: center;
+                    perspective: 10px;
+                    
                     
                     
                 }
@@ -110,10 +109,12 @@ body{
 
 .main__container:hover .main__container__carte {
     transform: rotateY(180deg);
+    
 }
 
 .main__container__carte__verso__contenu__article__bouton:hover{
     cursor: pointer;
     box-shadow: 0px 4px 4px 2px #242323;
     background-color: rgb(216, 120, 237);
+    perspective: 8px;
 }
