@@ -1,17 +1,23 @@
 @charset "UTF-8";
 .main {
   display: flex;
-  margin-top: 50px;
+  margin-top: 80px;
   justify-content: center;
 }
 
 .main__container {
-  max-width: 280px;
-  min-width: 280px;
-  max-height: 450px;
-  min-height: 450px;
+  max-width: 600px;
+  min-width: 250px;
+  max-height: 500px;
+  min-height: 400px;
   border-radius: 30px;
   perspective: 500px;
+}
+@media all and (min-width: 768px) {
+  .main__container {
+    min-width: 350px;
+    min-height: 500px;
+  }
 }
 .main__container__carte {
   width: 100%;
@@ -19,6 +25,10 @@
   transition: 2s ease-in-out;
   transform-style: preserve-3d;
   position: relative;
+  scale: 1;
+  -webkit-animation: apparition 1.5s linear;
+          animation: apparition 1.5s linear;
+  padding-top: 20px;
 }
 .main__container__carte__recto, .main__container__carte__verso {
   width: 100%;
@@ -38,10 +48,10 @@
   /* décalage du texte*/
 }
 .main__container__carte__recto__fond, .main__container__carte__verso__fond {
-  background: linear-gradient(60deg, rgb(45, 104, 197) 0%, rgb(45, 159, 252) 28%, rgb(15, 197, 251) 34%, rgb(255, 255, 255) 50%, rgb(15, 197, 251) 60%, rgb(45, 159, 252) 75%, rgb(45, 104, 197) 90%);
+  background: linear-gradient(60deg, rgb(35, 78, 148) 0%, rgb(45, 159, 252) 30%, rgb(15, 197, 251) 40%, rgb(255, 255, 255) 50%, rgb(15, 197, 251) 60%, rgb(45, 159, 252) 90%, rgb(35, 78, 148) 100%);
   background-size: 300% 200%;
-  -webkit-animation: degrad 4s ease infinite;
-          animation: degrad 4s ease infinite;
+  -webkit-animation: degrad 6s ease infinite;
+          animation: degrad 6s ease infinite;
   overflow: hidden;
   height: 100%;
   width: 100%;
@@ -137,6 +147,27 @@
     background-position: 0% 50%;
   }
 }
+@-webkit-keyframes apparition {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes apparition {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+* {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 h1 {
   font-size: 30px;
   font-family: "Lobster", cursive;
@@ -153,5 +184,5 @@ a {
 }
 
 body {
-  background-color: black;
+  background-color: rgb(37, 37, 37);
 }/*# sourceMappingURL=style.css.map */
