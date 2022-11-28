@@ -5,48 +5,25 @@
     justify-content: space-between;
     font-family: Arial, Helvetica, sans-serif;
 
-
     &__image {
-        position: relative;
+        &__ap {
 
-        &__off__ap-off {
-            position: absolute;
-            z-index: 1;
+            border-radius: 30px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;  
         }
-
-        &__on{
-            &__ap-on {
+        &__ap-off{
             position: absolute;
-            
+            left: 75px;
+            top: 160px;
             z-index: 3;
             opacity: 1;
-            animation: opacite 8s cubic-bezier(.14, .42, .22, 1.05) 2s;
-            }
-            &__texte__1{
-                font-size: 60px;
-                font-family: "Inconsolata", Helvetica, sans-serif;
-                
-            }
-            &__texte__2{
-                position: relative;
-                font-size: 40px;
-                font-family: "Inconsolata", Helvetica, sans-serif;
-                &::after {
-                    content: "_";
-                    position: absolute;
-                    right: -15px;
-                    background-color: rgb(79, 79, 79);
-                    width: 101%;
-                    animation: ecriture 5s steps(28) alternate 2s,
-                        tiret 1s infinite;
-                }
-            }
+            animation: opacite 8s cubic-bezier(.14,.42,.22,1.05) 2s;
         }
-
-            
-        
-
-
         /*&__ap-on{
             position: absolute;
             left: 350px;
@@ -56,9 +33,9 @@
             animation: opacite 2s linear;
         }*/
 
+        
+
     }
-
-
 
     &__onglet {
         width: 80%;
@@ -67,7 +44,6 @@
         justify-content: center;
         align-items: center;
         height: 450px;
-
         &__service {
             width: 60%;
             height: 100px;
@@ -79,12 +55,10 @@
             align-items: center;
             box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
             position: relative;
-
-            &:hover {
+            &:hover{
                 width: 100%;
                 transition: 0.8s ease-in-out;
             }
-
             &__titre {
                 font-size: 30px;
                 width: 70%;
@@ -98,7 +72,7 @@
         &__competence {
 
             width: 60%;
-
+           
             height: 100px;
             border-radius: 50px;
             background-color: rgb(60, 170, 91);
@@ -107,12 +81,10 @@
             justify-content: center;
             align-items: center;
             box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-
-            &:hover {
+            &:hover{
                 width: 100%;
                 transition: 0.8s ease-in-out;
             }
-
             &__titre {
                 font-size: 30px;
                 width: 70%;
@@ -121,7 +93,6 @@
             &__icone {
                 font-size: 30px;
             }
-
         }
 
         &__projet {
@@ -134,12 +105,10 @@
             justify-content: center;
             align-items: center;
             box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-
-            &:hover {
+            &:hover{
                 width: 100%;
                 transition: 0.8s ease-in-out;
             }
-
             &__titre {
                 font-size: 30px;
                 width: 70%;
@@ -160,17 +129,14 @@
             justify-content: center;
             align-items: center;
             box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-
-            &:hover {
+            &:hover{
                 width: 100%;
                 transition: 0.8s ease-in-out;
             }
-
             &__titre {
                 font-size: 30px;
                 width: 70%;
             }
-
             &__icone {
                 font-size: 30px;
             }
@@ -179,17 +145,15 @@
     }
 
 }
-
-@keyframes opacite {
-    100% {
+@keyframes opacite{
+    100%{
         opacity: 0;
         animation-play-state: paused;
     }
 }
-
-@keyframes opacite_inverse {
-    100% {
+@keyframes opacite_inverse{
+    100%{
         opacity: 1;
-
+        
     }
 }

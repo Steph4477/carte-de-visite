@@ -1,10 +1,45 @@
+.main__fond__image {
+    &__titre {
+        position: absolute;
+        left: 25%;
+        bottom: 30%;
+        color: rgb(0, 222, 0);
+        z-index: 2;
 
+
+        &__texte {
+            position: relative;
+
+            &__1 {
+                font-size: 60px;
+                font-family: "Inconsolata", Helvetica, sans-serif;
+            }
+
+            
+            &__2 {
+                font-size: 40px;
+                font-family: "Inconsolata", Helvetica, sans-serif;
+            }
+            &__2::after {
+                content: "_";
+                position: absolute;
+                right: -15px;
+                background-color: rgb(79, 79, 79);
+                width: 101%;
+                animation: ecriture 5s steps(28) alternate 2s,
+                tiret 1s infinite;
+            }
+        }
+    }
+
+
+
+}
 @keyframes ecriture{
     to{
         width: 0%;
     }
 }
-
 @keyframes tiret{
     50%{
         color: transparent;

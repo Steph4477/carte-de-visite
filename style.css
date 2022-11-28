@@ -316,7 +316,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .main__fond__image {
-  position: relative;
   /*&__ap-on{
       position: absolute;
       left: 350px;
@@ -326,34 +325,23 @@ body {
       animation: opacite 2s linear;
   }*/
 }
-.main__fond__image__off__ap-off {
-  position: absolute;
+.main__fond__image__ap {
+  border-radius: 30px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   z-index: 1;
 }
-.main__fond__image__on__ap-on {
+.main__fond__image__ap-off {
   position: absolute;
+  left: 75px;
+  top: 160px;
   z-index: 3;
   opacity: 1;
   -webkit-animation: opacite 8s cubic-bezier(0.14, 0.42, 0.22, 1.05) 2s;
           animation: opacite 8s cubic-bezier(0.14, 0.42, 0.22, 1.05) 2s;
-}
-.main__fond__image__on__texte__1 {
-  font-size: 60px;
-  font-family: "Inconsolata", Helvetica, sans-serif;
-}
-.main__fond__image__on__texte__2 {
-  position: relative;
-  font-size: 40px;
-  font-family: "Inconsolata", Helvetica, sans-serif;
-}
-.main__fond__image__on__texte__2::after {
-  content: "_";
-  position: absolute;
-  right: -15px;
-  background-color: rgb(79, 79, 79);
-  width: 101%;
-  -webkit-animation: ecriture 5s steps(28) alternate 2s, tiret 1s infinite;
-          animation: ecriture 5s steps(28) alternate 2s, tiret 1s infinite;
 }
 .main__fond__onglet {
   width: 80%;
@@ -478,11 +466,40 @@ body {
     opacity: 1;
   }
 }
+.main__fond__image__titre {
+  position: absolute;
+  left: 25%;
+  bottom: 30%;
+  color: rgb(0, 222, 0);
+  z-index: 2;
+}
+.main__fond__image__titre__texte {
+  position: relative;
+}
+.main__fond__image__titre__texte__1 {
+  font-size: 60px;
+  font-family: "Inconsolata", Helvetica, sans-serif;
+}
+.main__fond__image__titre__texte__2 {
+  font-size: 40px;
+  font-family: "Inconsolata", Helvetica, sans-serif;
+}
+.main__fond__image__titre__texte__2::after {
+  content: "_";
+  position: absolute;
+  right: -15px;
+  background-color: rgb(79, 79, 79);
+  width: 101%;
+  -webkit-animation: ecriture 5s steps(28) alternate 2s, tiret 1s infinite;
+          animation: ecriture 5s steps(28) alternate 2s, tiret 1s infinite;
+}
+
 @-webkit-keyframes ecriture {
   to {
     width: 0%;
   }
 }
+
 @keyframes ecriture {
   to {
     width: 0%;
