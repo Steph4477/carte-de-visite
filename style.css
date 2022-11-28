@@ -492,8 +492,8 @@ body {
   right: -15px;
   background-color: rgb(79, 79, 79);
   width: 101%;
-  -webkit-animation: ecriture 5s steps(28) alternate 2s, tiret 2s;
-          animation: ecriture 5s steps(28) alternate 2s, tiret 2s;
+  -webkit-animation: ecriture 5s steps(28) alternate 2s, tiret 1s infinite;
+          animation: ecriture 5s steps(28) alternate 2s, tiret 1s infinite;
 }
 
 @-webkit-keyframes ecriture {
