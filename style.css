@@ -340,8 +340,8 @@ body {
   top: 160px;
   z-index: 3;
   opacity: 1;
-  -webkit-animation: opacite 8s cubic-bezier(0.14, 0.42, 0.22, 1.05);
-          animation: opacite 8s cubic-bezier(0.14, 0.42, 0.22, 1.05);
+  -webkit-animation: opacite 8s cubic-bezier(0.14, 0.42, 0.22, 1.05) 2s;
+          animation: opacite 8s cubic-bezier(0.14, 0.42, 0.22, 1.05) 2s;
   -webkit-animation-play-state: initial;
           animation-play-state: initial;
 }

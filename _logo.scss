@@ -22,7 +22,7 @@
             top: 160px;
             z-index: 3;
             opacity: 1;
-            animation: opacite 8s cubic-bezier(.14,.42,.22,1.05);
+            animation: opacite 8s cubic-bezier(.14,.42,.22,1.05) 2s;
             animation-play-state: initial;
         }
         /*&__ap-on{
