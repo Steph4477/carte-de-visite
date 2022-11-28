@@ -166,6 +166,7 @@
 * {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0;
 }
 
 h1 {
@@ -314,6 +315,16 @@ body {
   justify-content: space-between;
   font-family: Arial, Helvetica, sans-serif;
 }
+.main__fond__image {
+  /*&__ap-on{
+      position: absolute;
+      left: 350px;
+      top: 160px;
+      z-index: 1;
+      opacity: 1;
+      animation: opacite 2s linear;
+  }*/
+}
 .main__fond__image__ap {
   border-radius: 30px;
   margin-top: 30px;
@@ -321,19 +332,18 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 1;
 }
-.main__fond__image__titre {
+.main__fond__image__ap-off {
   position: absolute;
-  left: 25%;
-  bottom: 30%;
-  color: rgb(0, 222, 0);
-}
-.main__fond__image__titre__texte__1 {
-  padding-left: 80px;
-  font-size: 90px;
-}
-.main__fond__image__titre__texte__2 {
-  font-size: 50px;
+  left: 75px;
+  top: 160px;
+  z-index: 3;
+  opacity: 1;
+  -webkit-animation: opacite 8s cubic-bezier(0.14, 0.42, 0.22, 1.05);
+          animation: opacite 8s cubic-bezier(0.14, 0.42, 0.22, 1.05);
+  -webkit-animation-play-state: initial;
+          animation-play-state: initial;
 }
 .main__fond__onglet {
   width: 80%;
@@ -431,4 +441,79 @@ body {
 }
 .main__fond__onglet__propos__icone {
   font-size: 30px;
+}
+
+@-webkit-keyframes opacite {
+  100% {
+    opacity: 0;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+}
+
+@keyframes opacite {
+  100% {
+    opacity: 0;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+}
+@-webkit-keyframes opacite_inverse {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacite_inverse {
+  100% {
+    opacity: 1;
+  }
+}
+.main__fond__image__titre {
+  position: absolute;
+  left: 25%;
+  bottom: 30%;
+  color: rgb(0, 222, 0);
+  z-index: 2;
+}
+.main__fond__image__titre__texte {
+  position: relative;
+}
+.main__fond__image__titre__texte__1 {
+  font-size: 60px;
+  font-family: "Inconsolata", Helvetica, sans-serif;
+}
+.main__fond__image__titre__texte__2 {
+  font-size: 40px;
+  font-family: "Inconsolata", Helvetica, sans-serif;
+}
+.main__fond__image__titre__texte__2::after {
+  content: "_";
+  position: absolute;
+  right: -15px;
+  background-color: rgb(79, 79, 79);
+  width: 101%;
+  -webkit-animation: ecriture 5s steps(28) alternate 2s, tiret 2s;
+          animation: ecriture 5s steps(28) alternate 2s, tiret 2s;
+}
+
+@-webkit-keyframes ecriture {
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes ecriture {
+  to {
+    width: 0%;
+  }
+}
+@-webkit-keyframes tiret {
+  50% {
+    color: transparent;
+  }
+}
+@keyframes tiret {
+  50% {
+    color: transparent;
+  }
 }/*# sourceMappingURL=style.css.map */
